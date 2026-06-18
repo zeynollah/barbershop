@@ -11,7 +11,7 @@ Denna webbplats visar en modern och mobilvänlig layout för en barberarsalong m
 - kontaktsida
 - användning av animeringar, ikoner och responsiv navigation
 
-## Teknologier
+## Tekniker
 
 - HTML5
 - CSS / SCSS
