@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Välkommen till KRP Barbershop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="Images/KRP-logga.png"
+            width="60"
+            height="60"
+            class="rounded-circle"
+            alt="KRP Barbershop logotyp"
+          />
+        </a>
+        <span class="navbar-text mx-auto fw-bold my-welcome-text d-sm-none">
+          KRP-Barbershop!
+        </span>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Visa navigering"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Hem</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="våraTjänster.html">Våra tjänster</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="omOss.html">Om oss</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="kontaktaOss.html">Kontakta oss</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container my-5 flex-grow-1">
+      <section class="row mb-5 text-center justify-content-center">
+        <div class="col-12 mb-3">
+          <button
+            class="btn btn-info btn-lg rounded-circle d-inline-flex align-items-center justify-content-center shadow-lg btn-boka"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#bokaFormCollapse"
+            aria-expanded="false"
+            aria-controls="bokaFormCollapse"
+          >
+            Boka
+          </button>
+        </div>
+        <div class="collapse col-12" id="bokaFormCollapse">
+          <div class="boka-form-container text-start">
+            <h4 class="text-center mb-3">Boka din tid</h4>
+            <div
+              id="bookingError"
+              class="alert alert-danger d-none py-2 small"
+              role="alert"
+            ></div>
+            <form id="bookingForm">
+              <div class="mb-2">
+                <label for="name" class="form-label form-label-sm">Namn</label>
+                <input
+                  type="text"
+                  name="name"
+                  class="form-control form-control-sm"
+                  id="name"
+                  required
+                />
+              </div>
+              <div class="mb-2">
+                <label for="service" class="form-label form-label-sm">Välj tjänst</label>
+                <select
+                  name="service"
+                  class="form-select form-select-sm"
+                  id="service"
+                  required
+                >
+                  <option value="Herrklippning">Herrklippning - 399kr</option>
+                  <option value="Herrklippning + Skägg">
+                    Herrklippning + Skäggtrim - 600kr
+                  </option>
+                  <option value="Skäggtrim">Skäggtrim &amp; Form - 250kr</option>
+                  <option value="Pensionär">Pensionärklippning - 300kr</option>
+                  <option value="Barn">Barnklippning - 290kr</option>
+                  <option value="Snaggning">Snaggning (Maskin) - 200kr</option>
+                  <option value="Färgning">Färgning - 1000kr</option>
+                </select>
+              </div>
+              <div class="mb-2">
+                <label for="date" class="form-label form-label-sm">Datum</label>
+                <input
+                  type="date"
+                  name="date"
+                  class="form-control form-control-sm"
+                  id="date"
+                  required
+                />
+              </div>
+              <div class="mb-2">
+                <label for="time" class="form-label form-label-sm">Tid</label>
+                <input
+                  type="time"
+                  name="time"
+                  class="form-control form-control-sm"
+                  id="time"
+                  min="10:00"
+                  max="19:00"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label form-label-sm">Din e-post</label>
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control form-control-sm"
+                  id="email"
+                  required
+                />
+              </div>
+              <button type="submit" class="btn btn-primary btn-sm w-100">
+                Boka nu
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="my-5">
+        <section class="row row-cols-1 row-cols-md-1 g-4 mb-5">
+          <div class="col" data-aos="fade-up">
+            <img
+              src="Images/IMG1.png"
+              class="img-fluid rounded shadow-sm"
+              alt="Barbershop interiör"
+            />
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-delay="250">
+            <img
+              src="Images/IMG2.png"
+              class="img-fluid rounded shadow-sm"
+              alt="Klippning i stolen"
+            />
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-delay="500">
+            <img
+              src="Images/IMG3.png"
+              class="img-fluid rounded shadow-sm"
+              alt="Skäggtrimning"
+            />
+          </div>
+        </section>
+
+        <section class="row mb-4">
+          <div class="col-12 p-4 bg-light rounded text-center">
+            <h2 class="fw-bold text-uppercase">Välkommen till oss</h2>
+            <p class="lead">
+              Välkommen till KRP Barbershop. Här snackar vi inte bara frisyrer –
+              vi snackar stil. Vi kör äkta hantverk med fokus på detaljer, från
+              knivskarpa fades till den perfekta skäggtrimmen. Vi vet vad som
+              gäller, så oavsett om du vill köra en klassisk look eller fräscha
+              upp stilen så sitter du rätt hos oss. Kom förbi, ta plats i stolen
+              och låt oss göra jobbet. Du går ut härifrån redo för vad som helst.
+            </p>
+          </div>
+        </section>
+
+        <section class="row mb-4">
+          <div class="col-12 p-4 bg-light rounded text-center">
+            <h2 class="fw-bold text-uppercase">Vårt koncept</h2>
+            <p class="lead">
+              För oss är barbering mer än bara ett jobb – det är en livsstil. Vi
+              har byggt upp KRP Barbershop för att ge dig den där känslan av 100%
+              kvalitet varje gång du kliver innanför dörren. Inget slarv, inga
+              genvägar. Vi kör på erfarenhet, högsta precision och en vibe som gör
+              att du alltid känner dig hemma. Här får du service som märks, och en
+              stil som håller.
+            </p>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="footer py-5 bg-dark text-white text-center">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-3"><strong>Öppettider</strong></h5>
+            <ul class="list-unstyled">
+              <li>Mån-Fre: 10:00 - 19:00</li>
+              <li>Lör: 11:00 - 17:00</li>
+              <li>Sön: Stängt</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h5 class="text-uppercase mb-3">
+              <strong>Följ oss på sociala-medier</strong>
+            </h5>
+            <div class="social-links">
+              <a
+                href="https://www.instagram.com/"
+                class="text-white mx-3 fs-3"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Följ oss på Instagram"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://www.facebook.com/"
+                class="text-white mx-3 fs-3"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Följ oss på Facebook"
+              >
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a
+                href="https://www.tiktok.com/"
+                class="text-white mx-3 fs-3"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Följ oss på TikTok"
+              >
+                <i class="fab fa-tiktok"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <hr class="my-4 border-secondary" />
+        <p class="small text-muted mb-0">&copy; 2026 KRP Barbershop</p>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/email-config.js"></script>
+    <script src="js/KRP-Barbershop.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    </script>
+  </body>
+</html>
