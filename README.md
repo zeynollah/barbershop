@@ -35,19 +35,6 @@ Denna webbplats visar en modern och mobilvänlig layout för en barberarsalong m
 - `Images/` – bildfiler och logotyp
 - `package.json` – projektmetadata och beroenden
 
-## Installation och användning
-
-1. Klona eller ladda ner detta repository.
-2. Öppna `index.html` i din webbläsare.
-3. Alternativt kan du använda ett lokalt utvecklingsverktyg som levererar statiska filer.
-
-> För att redigera SCSS, använd `scss/style.scss` och skapa sedan CSS med ditt SCSS-verktyg eller Prepros.
-
-## Tips för GitHub
-
-- Lägg till en beskrivande commit-meddelande, till exempel `Lägger till KRP Barbershop webbplats`.
-- Skapa en GitHub Pages-webbplats från `main`-grenen om du vill visa sidan online.
-
 ## Licens
 
 Detta projekt är fritt att använda och anpassa för dina egna ändamål.
